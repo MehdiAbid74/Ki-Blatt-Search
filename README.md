@@ -1,7 +1,9 @@
 # Ki-Blatt-Search
 Bonus:
+
 -was Heute gut funktioniert ist : KI-Assistenz+Medezin / Mobile Plattformen und Greifarme sortieren, transportieren und verpacken Waren im 24/7-Betrieb/ routine in Arbeit
 -ungelöst:Roboter leisten Logistik, aber echte Beziehungspflege komplexe Entscheidungen und Haftungsfragen bleiben offen/Umwelt Problemen/
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Search.01: 
 1)
@@ -27,9 +29,9 @@ Die Heuristik muss korrigiert werden,
 sodass für alle Knoten ℎ(𝑛)≤𝑐(𝑛,𝑛′)+ℎ(𝑛′)h(n)≤c(n,n′)+h(n′)gilt.
 Danach kann man A* erneut ausführen mit den korrigierten Werten
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Search.03:
 wenn wir sagen h1 dominiert das bedeutet das in alle knoten h₁(n) ≥ h₂(n) -> also die nutzung von h1 fuhrt an einem schnellste und bessere suche 
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Search.04:
