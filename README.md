@@ -36,7 +36,7 @@ Danach kann man A* erneut ausführen mit den korrigierten Werten
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Search.03:
-wenn wir sagen h1 dominiert das bedeutet das in alle knoten h₁(n) ≥ h₂(n) -> also die nutzung von h1 fuhrt an einem schnellste und bessere suche 
+wenn wir sagen h1 dominiert das bedeutet das in alle knoten h₁(n) <= h₂(n) -> also die nutzung von h1 fuhrt an einem schnellste und bessere suche 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
