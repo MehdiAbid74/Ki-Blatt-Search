@@ -23,7 +23,8 @@ Search.02:
 1)
 
 ![2,1-1](https://github.com/user-attachments/assets/df6fe5ff-3f30-4a44-b35a-6f2b68424263)
-![2,1-22](https://github.com/user-attachments/assets/9707aaa8-c700-4db0-a5a2-489641652075)
+<img width="602" height="840" alt="Screenshot 2025-10-15 195144" src="https://github.com/user-attachments/assets/d791cc31-8a9f-4264-964d-ce938101a225" />
+
 
 2)
 
