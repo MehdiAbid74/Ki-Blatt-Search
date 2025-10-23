@@ -1,0 +1,99 @@
+#8 Damen Problem
+
+# [1,2,3,4,5,6,7,8] "node"
+
+import random as rnd
+
+
+def getr():
+    return rnd.randrange(1,9)
+
+def getrn():
+    return [getr(),getr(),getr(),getr(),getr(),getr(),getr(),getr()]
+
+def printLoesung(l):
+    i = 1
+    for x in l:
+        print(f"{i}: {x}")  # sauber formatiert
+        i += 1
+
+def zielfunktion(board):
+    conflicts = 0
+    for i in range(8):#von 1 - 8
+        for j in range(i + 1, 8):
+            # Gleich Zeile → gleiche Reihe
+            if board[i] == board[j]:
+                conflicts += 1
+            # Diagonalprüfung
+            elif abs(board[i] - board[j]) == abs(i - j):
+                conflicts += 1
+    return conflicts
+
+def mutation(l):
+    l[rnd.randrange(0, len(l))] = getr()
+
+def crossover(l, m):
+    schnittpunkt = rnd.randrange(1, len(l))# Zufälliger Punkt (nicht 0, nicht Ende)
+    # Neues Kind = linker Teil von l + rechter Teil von m
+    kind = l[:schnittpunkt] + m[schnittpunkt:]
+    return kind
+
+
+def printgenpool(l,evo):
+    print(f"--- {evo} ---")
+    i = 1
+    for x in l:
+        print(f"{i}: {x}::{zielfunktion(x)}")
+        i+=1
+
+def selection(genpool):
+    # Zwei zufällige Eltern wählen
+    p1 = rnd.choice(genpool)
+    p2 = rnd.choice(genpool)
+    # Neues Kind erzeugen
+    child = crossover(p1, p2)
+    # Mutieren
+    mutation(child)
+    # Kind zur Population hinzufügen
+    genpool.append(child)
+
+genpool = [getrn(),getrn()]
+evolution = 0
+
+def completerun():
+    selection(genpool)
+    #printgenpool(genpool,evolution)
+    killBad()
+
+def findbest(genpool):
+    highest = 50
+    node = 0
+    for g in genpool:
+        if zielfunktion(g) < highest:
+            highest = zielfunktion(g)
+            node = g
+    print(f"{node}: {zielfunktion(node)}")
+
+def findworst(genpool):
+    highest = 0
+    node = 0
+    for g in genpool:
+        if zielfunktion(g) > highest:
+            highest = zielfunktion(g)
+            node = g
+    return node
+
+def killBad():
+    if len(genpool) >= 20:
+        while len(genpool) > 20:
+            genpool.remove(findworst(genpool))
+
+
+#---- start --------
+
+printgenpool(genpool,evolution)
+for i in range(500):
+
+    evolution += 1
+    completerun()
+findbest(genpool)
