@@ -1,0 +1,22 @@
+1. „Here’s Waldo“
+in diesem proejkt wurde ein GA algorithmus benutzt, um ein optimal suchstrategie zu haben.
+Crossover: Kombination von zwei Pfaden.
+Mutation: Zufällige Änderung einzelner Blickpunkte oder Reihenfolge.
+Fitnessfunktion: Bewertet, wie schnell und effizient Waldo im Bild gefunden wird (kürzere Suchzeit = bessere Fitness).
+Ziel: Minimierung der durchschnittlichen Suchzeit.
+
+2. „Evolution Simulator“
+Im Evolution Simulator werden virtuelle Kreaturen oder Objekte simuliert, die sich mit der Zeit verbessern.
+Kodierung: Jedes Individuum repräsentiert die Parameter einer Kreatur (z. B. Beinlänge, Muskelkraft).
+Crossover: Kombination von Merkmalen zweier Eltern.
+Mutation: Kleine zufällige Änderungen der Parameter.
+Fitnessfunktion: Leistung in der Simulation (z. B. wie weit oder wie schnell sich die Kreatur bewegt).
+Ziel: Maximierung der Überlebens- oder Leistungsfähigkeit
+
+3. „American Fuzzy Lop“
+AFL ist ein Fuzzing-Tool zur automatischen Fehlersuche in Programmen. Es verwendet Prinzipien evolutionärer Algorithmen, um Eingaben zu erzeugen, die möglichst viele Programmzustände erreichen.
+Kodierung: Eingabedaten für das zu testende Programm (Bytestrings).
+Mutation: Änderung einzelner Bits oder Bytes.
+Crossover: Kombination zweier Testeingaben.
+Fitnessfunktion: Anzahl der neuen oder interessanten Codepfade, die durch eine Eingabe ausgelöst werden.
+Ziel: Maximierung der Codeabdeckung (Erreichen neuer Programmzweige).
