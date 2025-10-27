@@ -1,0 +1,28 @@
+Games.02 :
+1)
+def Minimax(state):
+	(val, action) = (-Inf, null)
+	for(a,s) in successors(state):
+		v=Min-Value(s)
+		if(val<=v):
+			(val, action) = (v,a)
+	return action
+2)
+def AlphaBeta(state):
+    val, action = (-Inf, None)
+    alpha, beta = -Inf, +Inf
+    for (a, s) in successors(state):
+        v = Min_Value(s, alpha, beta)
+        if v > val:
+            val, action = v, a
+        alpha = max(alpha, val)	
+	if (alpha>=beta):
+		break      
+    return action
+3)
+X | O | X
+O | X |  
+  |   | O
+Der Minimax-Algorithmus berechnet alle möglichen Spielzüge und untersucht alle Knoten im Suchbaum.
+
+Der Alpha-Beta-Algorithmus schneidet viele Äste ab, sobald klar ist, dass sie das Ergebnis nicht mehr verbessern können.
