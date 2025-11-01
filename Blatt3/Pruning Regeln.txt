@@ -1,0 +1,15 @@
+Schneide (unter) MIN-Knoten ab, deren 
+β
+ 
+≤
+ dem 
+α
+ des MAX-Vorgängers ist.
+Schneide (unter) MAX-Knoten ab, deren 
+α
+ 
+≥
+ dem 
+β
+ des MIN-Vorgängers ist.
+Abbruch, wenn kein Platz mehr zwischen Alpha und Beta
